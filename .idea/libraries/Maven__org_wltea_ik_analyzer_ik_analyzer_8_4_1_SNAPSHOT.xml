@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.wltea.ik-analyzer:ik-analyzer:8.4.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wltea/ik-analyzer/ik-analyzer/8.4.1-SNAPSHOT/ik-analyzer-8.4.1-20201112.073530-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wltea/ik-analyzer/ik-analyzer/8.4.1-SNAPSHOT/ik-analyzer-8.4.1-20201112.073530-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wltea/ik-analyzer/ik-analyzer/8.4.1-SNAPSHOT/ik-analyzer-8.4.1-20201112.073530-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
