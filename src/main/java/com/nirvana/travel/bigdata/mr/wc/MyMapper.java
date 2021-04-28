@@ -7,7 +7,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/10/27
  */
 public class MyMapper extends Mapper<Object, Text, Text, IntWritable> {

@@ -9,7 +9,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/3/27
  */
 public class NioClient {

@@ -17,7 +17,7 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/11/11
  */
 public class LuceneSearch {

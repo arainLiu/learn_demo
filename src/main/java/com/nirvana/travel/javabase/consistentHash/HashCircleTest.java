@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/11/5
  */
 public class HashCircleTest {

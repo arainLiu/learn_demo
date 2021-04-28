@@ -1,7 +1,7 @@
 package com.nirvana.travel.leetcode.bst_95;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/10
  */
 public class Solution {

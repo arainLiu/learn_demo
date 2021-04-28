@@ -3,7 +3,7 @@ package com.nirvana.travel.leetcode.diameterOfBinaryTree_543;
 import com.nirvana.travel.leetcode.base.TreeNode;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/19
  */
 public class Solution {

@@ -1,7 +1,7 @@
 package com.nirvana.travel.leetcode.arr2merge_88;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/6
  */
 public class Solution {

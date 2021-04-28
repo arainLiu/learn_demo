@@ -17,7 +17,7 @@ import org.springframework.context.annotation.EnableLoadTimeWeaving;
  * 输入: [1,3,5,6], 2
  * 输出: 1
  *
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/20
  */
 public class Solution {

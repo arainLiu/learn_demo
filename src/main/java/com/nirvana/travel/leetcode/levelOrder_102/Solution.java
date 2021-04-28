@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/10
  */
 public class Solution {

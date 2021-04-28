@@ -1,7 +1,7 @@
 package com.nirvana.travel.leetcode.twosum_167;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/20
  */
 public class Solution {

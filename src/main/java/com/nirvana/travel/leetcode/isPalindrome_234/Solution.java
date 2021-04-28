@@ -4,7 +4,7 @@ import com.nirvana.travel.leetcode.base.ListNode;
 import java.util.Stack;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/15
  */
 public class Solution {

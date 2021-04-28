@@ -3,7 +3,7 @@ package com.nirvana.travel.leetcode.myqueue_232;
 import java.util.Stack;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/23
  */
 public class MyQueue {

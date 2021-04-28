@@ -1,7 +1,7 @@
 package com.nirvana.travel.leetcode.longestPalindrome_05;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/1/4
  */
 public class Solution {

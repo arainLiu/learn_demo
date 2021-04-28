@@ -16,7 +16,7 @@ package com.nirvana.travel.javabase;
  * ~的优先级最高，其次是<<、>>和>>>，再次是＆，然后是^，优先级最低的是|
  *
  *
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/1/11
  */
 public class BitOperation {

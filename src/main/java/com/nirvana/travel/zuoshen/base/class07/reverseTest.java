@@ -1,7 +1,7 @@
 package com.nirvana.travel.zuoshen.base.class07;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/9
  */
 public class reverseTest {

@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/11/5
  */
 public class HashService implements IhashService {

@@ -6,7 +6,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/10/27
  */
 public class MyReducer extends Reducer<Text, IntWritable, Text, IntWritable> {

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/14
  */
 public class SynchronizedTest {

@@ -3,7 +3,7 @@ package com.nirvana.travel.leetcode.lowestCommonAncestor_68;
 import com.nirvana.travel.leetcode.base.TreeNode;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/27
  *
  * 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。

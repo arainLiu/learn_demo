@@ -3,7 +3,7 @@ package com.nirvana.travel.leetcode.isSymmetric_101;
 import com.nirvana.travel.leetcode.base.TreeNode;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/4/10
  */
 public class Solution {

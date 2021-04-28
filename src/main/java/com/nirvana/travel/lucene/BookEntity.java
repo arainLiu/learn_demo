@@ -1,7 +1,7 @@
 package com.nirvana.travel.lucene;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/11/10
  */
 public class BookEntity {

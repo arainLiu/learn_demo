@@ -1,7 +1,7 @@
 package com.nirvana.travel.bigdata.mr.wc;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/10/29
  */
 public class Test {

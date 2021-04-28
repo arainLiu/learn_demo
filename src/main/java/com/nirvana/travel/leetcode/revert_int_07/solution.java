@@ -7,7 +7,7 @@ package com.nirvana.travel.leetcode.revert_int_07;
  *
  * 假设环境不允许存储 64 位整数（有符号或无符号）。
  *
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2021/2/19
  */
 public class solution {

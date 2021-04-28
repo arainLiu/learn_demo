@@ -1,7 +1,7 @@
 package com.nirvana.travel.algorithm.sort;
 
 /**
- * @author liupengyu10336@hellobike.com
+ * @author arainliu
  * @date 2020/10/18
  */
 public class MergeSort {
