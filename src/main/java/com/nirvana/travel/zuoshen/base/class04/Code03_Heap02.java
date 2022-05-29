@@ -8,10 +8,12 @@ import java.util.PriorityQueue;
 public class Code03_Heap02 {
 
 	public static class MyHeap<T> {
+		//堆
 		private ArrayList<T> heap;
+		//记录任何一个样本，在堆上的位置
 		private HashMap<T, Integer> indexMap;
-		private int heapSize;
-		private Comparator<? super T> comparator;
+		private int heapSize;//堆大小
+		private Comparator<? super T> comparator;//比较器
 
 		public MyHeap(Comparator<? super T> com) {
 			heap = new ArrayList<>();
@@ -50,6 +52,7 @@ public class Code03_Heap02 {
 
 		public void resign(T value) {
 			int valueIndex = indexMap.get(value);
+			//可能是往上去heapInsert,或者往下进行heapify
 			heapInsert(valueIndex);
 			heapify(valueIndex, heapSize);
 		}

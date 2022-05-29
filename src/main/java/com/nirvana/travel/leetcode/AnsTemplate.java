@@ -1,10 +1,7 @@
 package com.nirvana.travel.leetcode;
 
-import com.alibaba.fastjson.JSON;
 import com.nirvana.travel.leetcode.base.TreeNode;
-import com.nirvana.travel.zuoshen.base.class05.Code01_TrieTree.Right;
-import com.sun.scenario.effect.Merge;
-import com.sun.tools.hat.internal.model.Root;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -17,16 +14,37 @@ import java.util.Queue;
 public class AnsTemplate {
 
 
-  public static void main(String[] args) {
-    int n1 = 3^1;
-    int n2 = 4^1;
-    int n3 = 3&1;
-    int n4 = 4&1;
+  /**
+   * 给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。
+   *
+   * 示例 1:
+   * 输入: "abab"
+   * 输出: True
+   *
+   * 解释: 可由子字符串 "ab" 重复两次构成。
+   * 示例 2:
+   * 输入: "aba"
+   * 输出: False
+   *
+   * 示例 3:
+   * 输入: "abcabcabcabc"
+   * 输出: True
+   * 解释: 可由子字符串 "abc" 重复四次构成。 (或者子字符串 "abcabc" 重复两次构成。)
+   * @param s
+   * @return
+   */
+  public boolean repeatedSubstringPattern(String s) {
+    if((s.length() & 1) == 1) {
+      return false;
+    }
 
-    System.out.println(n1);
-    System.out.println(n2);
-    System.out.println(n3);
-    System.out.println(n4);
+    int mid = s.length()>>1;
+    return s.substring(0, mid).equals(s.substring(mid));
+  }
+
+
+  public static void main(String[] args) {
+    System.out.println(new AnsTemplate().repeatedSubstringPattern("abab"));
   }
 
   public static void merge(int[] A, int m, int[] B, int n) {

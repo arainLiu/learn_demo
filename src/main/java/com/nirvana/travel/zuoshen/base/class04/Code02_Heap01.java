@@ -29,6 +29,8 @@ public class Code02_Heap01 {
 			heapInsert(heap, heapSize++);
 		}
 
+		//返回最大值，并且将最大值从大根堆中删掉
+		//剩下的数，依然保持大根堆
 		public int pop() {
 			int ans = heap[0];
 			swap(heap, 0, --heapSize);
@@ -37,12 +39,16 @@ public class Code02_Heap01 {
 		}
 
 		private void heapInsert(int[] arr, int index) {
+			//当前位置的值和父节点的值进行比较，判断是否需要交换
+			//停止条件：不在比父亲节点大，或者index==0
 			while (arr[index] > arr[(index - 1) / 2]) {
 				swap(arr, index, (index - 1) / 2);
 				index = (index - 1) / 2;
 			}
 		}
 
+		//从index位置往下看，不断下沉
+		//停止条件，孩子的值都比当前值大，或者当前值已经没有孩子了
 		private void heapify(int[] arr, int index, int heapSize) {
 			int left = index * 2 + 1;
 			while (left < heapSize) {

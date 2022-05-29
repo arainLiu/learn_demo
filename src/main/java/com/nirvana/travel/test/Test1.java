@@ -1,5 +1,7 @@
 package com.nirvana.travel.test;
 
+import java.util.Scanner;
+
 /**
  * @author arainliu
  * @date 2021/3/18
@@ -7,8 +9,8 @@ package com.nirvana.travel.test;
 public class Test1 {
 
   public static void main(String[] args) {
-    int num =3;
-    System.out.println(~num + 1);
+    System.out.println(1200255656 % 16);
+    System.out.println(1200371629 % 16);
   }
 
 }

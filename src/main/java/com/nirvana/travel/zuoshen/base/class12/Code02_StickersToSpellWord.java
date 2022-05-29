@@ -2,57 +2,84 @@ package com.nirvana.travel.zuoshen.base.class12;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import javax.print.DocFlavor.STRING;
 
+/**
+ * rest中可能性很多，所以枚举不好列举，所有不好进行精细的动态规划
+ *
+ *
+ */
 public class Code02_StickersToSpellWord {
 
+	//stickers 贴纸， target目标字符串
 	public static int minStickers1(String[] stickers, String target) {
 		int n = stickers.length;
-		int[][] map = new int[n][26];
-		HashMap<String, Integer> dp = new HashMap<>();
+		int[][] map = new int[n][26];//把贴纸转化成n个有26个元素的数组
+
 		for (int i = 0; i < n; i++) {
 			char[] str = stickers[i].toCharArray();
 			for (char c : str) {
 				map[i][c - 'a']++;
 			}
 		}
+
+		//缓存
+		HashMap<String, Integer> dp = new HashMap<>();
 		dp.put("", 0);
 		return process1(dp, map, target);
 	}
 
 	// dp 傻缓存，如果t已经算过了，直接返回dp中的值
-	// t 剩余的目标
+	// t 剩余的目标，可变参数
 	// 0..N每一个字符串所含字符的词频统计
-	public static int process1(HashMap<String, Integer> dp, int[][] map, String t) {
-		if (dp.containsKey(t)) {
-			return dp.get(t);
+	public static int process1(HashMap<String, Integer> dp, int[][] map, String rest) {
+
+		if (dp.containsKey(rest)) {
+			return dp.get(rest);
 		}
-		int ans = Integer.MAX_VALUE;
+
+		//以下是正式的递归调用过程
+		int ans = Integer.MAX_VALUE;//搞定rest使用的最少贴纸数量
 		int n = map.length;
-		int[] tmap = new int[26];
-		char[] target = t.toCharArray();
+		int[] tmap = new int[26];//替代rest
+		char[] target = rest.toCharArray();
 		for (char c : target) {
 			tmap[c - 'a']++;
 		}
+
+		//map -> tmap
+
+		//枚举第一张叠纸是谁
 		for (int i = 0; i < n; i++) {
+			//贴纸中至少包含target中一种字符，才能继续，否则会栈溢出
 			if (map[i][target[0] - 'a'] == 0) {
 				continue;
 			}
+
 			StringBuilder sb = new StringBuilder();
+
+			//当前来到i号贴纸，j枚举a-z字符
 			for (int j = 0; j < 26; j++) {
+				//把i号贴纸的j位置上取出目标字符串剩下的目标字符rest存入sb
 				if (tmap[j] > 0) { // j这个字符是target需要的
 					for (int k = 0; k < Math.max(0, tmap[j] - map[i][j]); k++) {
 						sb.append((char) ('a' + j));
 					}
 				}
 			}
+			//s-> rest
 			String s = sb.toString();
+
 			int tmp = process1(dp, map, s);
+			// tmp == -1 表示没有贴纸能满足字符串要求
 			if (tmp != -1) {
 				ans = Math.min(ans, 1 + tmp);
 			}
 		}
-		dp.put(t, ans == Integer.MAX_VALUE ? -1 : ans);
-		return dp.get(t);
+		//ans == Integer.MAX_VALUE 表示某一个贴纸作为第一张搞定不了，ans没有变化过，返回-1表示不存在
+		dp.put(rest, ans == Integer.MAX_VALUE ? -1 : ans);
+
+		return dp.get(rest);
 	}
 
 	public static int minStickers2(String[] stickers, String target) {
@@ -127,6 +154,14 @@ public class Code02_StickersToSpellWord {
 		int ans = min == Integer.MAX_VALUE ? -1 : min;
 		dp.put(key, ans);
 		return ans;
+	}
+
+	public static void main(String[] args) {
+		String[] sticks = {"cccc", "bbaa", "ddee"};
+		String str = "abcccccdddddbbbaaaa";
+
+		System.out.println(minStickers1(sticks, str));
+		System.out.println(minStickers2(sticks, str));
 	}
 
 }

@@ -2,6 +2,18 @@ package com.nirvana.travel.zuoshen.class04;
 
 public class Code02_Heap01 {
 
+	public static void main(String[] args) {
+		int[] arr = {3,2,1,6,7,8,5,1,9};
+		MyMaxHeap heap = new MyMaxHeap(11);
+		for (int i : arr) {
+			heap.push(i);
+		}
+
+		while (!heap.isEmpty()) {
+			System.out.println(heap.pop());
+		}
+	}
+
 	public static class MyMaxHeap {
 		private int[] heap;
 		private final int limit;
@@ -116,7 +128,7 @@ public class Code02_Heap01 {
 
 	}
 
-	public static void main(String[] args) {
+	public static void main1(String[] args) {
 		int value = 1000;
 		int limit = 100;
 		int testTimes = 1000000;

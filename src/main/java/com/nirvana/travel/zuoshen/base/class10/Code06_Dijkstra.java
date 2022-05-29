@@ -24,6 +24,7 @@ public class Code06_Dijkstra {
 				if (!distanceMap.containsKey(toNode)) {
 					distanceMap.put(toNode, distance + edge.weight);
 				} else {
+					//记录已经存在，更新 from到toNode的最短距离
 					distanceMap.put(edge.to, Math.min(distanceMap.get(toNode), distance + edge.weight));
 				}
 			}
@@ -59,10 +60,13 @@ public class Code06_Dijkstra {
 
 	public static class NodeHeap {
 		private Node[] nodes; // 实际的堆结构
-		// key 某一个node， value 上面数组中的位置
+
+		// key 某一个node， value为在堆上数组中的位置，如果已经处理过标记为-1
 		private HashMap<Node, Integer> heapIndexMap;
+
 		// key 某一个节点， value 从源节点出发到该节点的目前最小距离
 		private HashMap<Node, Integer> distanceMap;
+
 		private int size; // 堆上有多少个点
 
 		public NodeHeap(int size) {

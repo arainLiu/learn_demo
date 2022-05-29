@@ -14,6 +14,13 @@ public class Code02_PrintAllSubsquences {
 		return ans;
 	}
 
+	/**
+	 *
+	 * @param str 固定，不变
+	 * @param index index此时来到的位置，要 Or 不要
+	 * @param ans
+	 * @param path
+	 */
 	public static void process1(char[] str, int index, List<String> ans, String path) {
 		if (index == str.length) {
 			ans.add(path);

@@ -18,6 +18,12 @@ public class Test {
 
   }
 
+  public void testThread() {
+    new Thread(() -> {
+
+    }).start();;
+  }
+
   private static void loadInitialDrivers() {
     String drivers;
     try { // 步骤2先读取

@@ -34,10 +34,6 @@ public class Test {
 			System.out.println(heap.poll());
 		}
 
-
-
-
-
 	}
 
 }
