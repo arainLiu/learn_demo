@@ -7,7 +7,7 @@ package com.nirvana.travel.leetcode.t_00_100.t_005_longestPalindrome;
 public class Solution2 {
 
     public static void main(String[] args) {
-        System.out.println(new Solution2().longestPalindromeDp("cbbd"));
+        System.out.println(new Solution2().longestPalindromeDp("cbacdffdcabd"));
     }
 
     public String longestPalindrome(String s) {
@@ -74,6 +74,13 @@ public class Solution2 {
                     }
                 }
             }
+        }
+
+        for (boolean[] booleans : dp) {
+            for (boolean aBoolean : booleans) {
+                System.out.print(aBoolean + " ");
+            }
+            System.out.println();
         }
 
         return s.substring(start, start+length);
