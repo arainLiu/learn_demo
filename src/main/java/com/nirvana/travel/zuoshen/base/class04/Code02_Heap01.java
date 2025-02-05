@@ -52,7 +52,9 @@ public class Code02_Heap01 {
 		private void heapify(int[] arr, int index, int heapSize) {
 			int left = index * 2 + 1;
 			while (left < heapSize) {
+				//获取左右子节点较大值的下标
 				int largest = left + 1 < heapSize && arr[left + 1] > arr[left] ? left + 1 : left;
+				//比较当前节点和较大子孩子的大小，大的设定为largest
 				largest = arr[largest] > arr[index] ? largest : index;
 				if (largest == index) {
 					break;

@@ -9,41 +9,34 @@ package com.nirvana.travel.algorithm.sort;
  */
 public class SelectSort {
 
-  public static void main12(String[] args) {
+  public static void main(String[] args) {
     int[] arr = new int[]{10,2,5,7,6,8,9,20,1,3};
     selectSort(arr);
-    for (int i=0;i<arr.length;i++){
+    for (int i=0;i<arr.length;i++) {
       System.out.print(arr[i] + " ");
     }
   }
 
 
   private static void selectSort(int[] arr) {
-    if (arr.length == 0)
-      return;
 
-    //每次循环从a[i+1...n]中找出最小值，放到前半部分有序数组最后
-    for (int i = 0;i < arr.length; i ++) {
-      int minValueIndex = i;
-      //arr[0...i]有序，每次循环找出arr[i+1...n]<arr[i]的下标j，将arr[i]和arr[j]进行交换位置
-      for (int j=i+1; j < arr.length; j ++) {
-        if (arr[j] < arr[minValueIndex]) {
-          minValueIndex = j;
-        }
+    if (arr.length ==0 || arr.length == 1) return;
+
+    //从[0..n-1]上一次找到最小值位置，和0位置进行交换
+    //从[1...n-1]上找到最小值位置，和1位置交换
+    for (int i = 0; i < arr.length-1; i++) {
+      //定义最小值位置
+      int minIndex = i;
+      //从i+1查找最小值位置
+      for (int j = i+1; j < arr.length; j++) {
+        minIndex = arr[minIndex] > arr[j] ? j : minIndex;
       }
 
-      if (i != minValueIndex) {
+      if (minIndex > i) {
         int temp = arr[i];
-        arr[i] = arr[minValueIndex];
-        arr[minValueIndex] = temp;
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
       }
-
-      for (int x=0;x < arr.length;x++) {
-        System.out.print(arr[x] + " ");
-      }
-      System.out.println();
-      System.out.println("=================");
-
     }
   }
 }

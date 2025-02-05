@@ -11,29 +11,24 @@ public class BubbleSort {
   public static void main(String[] args) {
     int[] arr = {3,2,4,6, 1,8,9,7};
     bubbleSort(arr);
-    StringBuffer sb = new StringBuffer();
-    for (int x : arr) {
-      sb.append(x).append(" ");
-    }
-    System.out.println(sb.toString());
+    SortUtils.printArr(arr);
   }
 
   public static void bubbleSort(int[] arr) {
+    if (arr.length == 0 || arr.length == 1) return;
 
-    int length = arr.length;
-    for (int i =0;i < length; i++) {
-
-      for (int j = 0; j < length - i -1; j++) {
+    //0...n-1
+    //0...n-2
+    //0...n-3
+    //外层循环n次，内层循环[0...i]
+    for (int i = arr.length -1 ; i > 0; i --) {
+      for (int j = 0; j < i; j++) {
         if (arr[j] > arr[j+1]) {
-          swap(arr, j, j+1);
+          SortUtils.swap(arr, j, j+1);
         }
       }
     }
+
   }
 
-  public static void swap(int[] arr, int i , int j) {
-    arr[i] = arr[i] ^ arr[j];
-    arr[j] = arr[i] ^ arr[j];
-    arr[i] = arr[i] ^ arr[j];
-  }
 }

@@ -14,6 +14,7 @@ public class Code04_HeapSort {
 //		for (int i = 0; i < arr.length; i++) { // O(N)
 //			heapInsert(arr, i); // O(logN)
 //		}
+		//这部分和上面的for是互斥关系，算是一个优化
 		for (int i = arr.length - 1; i >= 0; i--) {
 			heapify(arr, i, arr.length);
 		}
@@ -119,39 +120,43 @@ public class Code04_HeapSort {
 	// for test
 	public static void main(String[] args) {
 
-		// 默认小根堆
-		PriorityQueue<Integer> heap = new PriorityQueue<>();
-		heap.add(6);
-		heap.add(8);
-		heap.add(0);
-		heap.add(2);
-		heap.add(9);
-		heap.add(1);
-
-		while (!heap.isEmpty()) {
-			System.out.println(heap.poll());
-		}
-
-		int testTime = 500000;
-		int maxSize = 100;
-		int maxValue = 100;
-		boolean succeed = true;
-		for (int i = 0; i < testTime; i++) {
-			int[] arr1 = generateRandomArray(maxSize, maxValue);
-			int[] arr2 = copyArray(arr1);
-			heapSort(arr1);
-			comparator(arr2);
-			if (!isEqual(arr1, arr2)) {
-				succeed = false;
-				break;
-			}
-		}
-		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
-
-		int[] arr = generateRandomArray(maxSize, maxValue);
-		printArray(arr);
+		int[] arr = new int[]{6,8,9,0,1,2,4};
 		heapSort(arr);
-		printArray(arr);
+		System.out.println(arr);
+
+//		// 默认小根堆
+//		PriorityQueue<Integer> heap = new PriorityQueue<>();
+//		heap.add(6);
+//		heap.add(8);
+//		heap.add(0);
+//		heap.add(2);
+//		heap.add(9);
+//		heap.add(1);
+//
+//		while (!heap.isEmpty()) {
+//			System.out.println(heap.poll());
+//		}
+//
+//		int testTime = 500000;
+//		int maxSize = 100;
+//		int maxValue = 100;
+//		boolean succeed = true;
+//		for (int i = 0; i < testTime; i++) {
+//			int[] arr1 = generateRandomArray(maxSize, maxValue);
+//			int[] arr2 = copyArray(arr1);
+//			heapSort(arr1);
+//			comparator(arr2);
+//			if (!isEqual(arr1, arr2)) {
+//				succeed = false;
+//				break;
+//			}
+//		}
+//		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+//
+//		int[] arr = generateRandomArray(maxSize, maxValue);
+//		printArray(arr);
+//		heapSort(arr);
+//		printArray(arr);
 	}
 
 }

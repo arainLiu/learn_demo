@@ -8,7 +8,7 @@ public class Code05_SortArrayDistanceLessK {
 		// 默认小根堆
 		PriorityQueue<Integer> heap = new PriorityQueue<>();
 		int index = 0;
-		for (; index <= Math.min(arr.length, k); index++) {
+		for (; index <= Math.min(arr.length -1, k); index++) {
 			heap.add(arr[index]);
 		}
 		int i = 0;

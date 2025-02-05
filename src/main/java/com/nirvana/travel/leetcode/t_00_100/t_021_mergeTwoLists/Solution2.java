@@ -23,7 +23,7 @@ public class Solution2 {
             cur = cur.next;
         }
 
-        cur.next = list1 == null? list2 : list1;
+        cur.next = list1 == null?list2:list1;
         return preHead.next;
     }
 }

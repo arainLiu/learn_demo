@@ -26,12 +26,12 @@ public class Solution {
                 cur = cur.left;
             }
 
-            TreeNode node = stack.pop();
+            cur = stack.pop();
             k --;
             if (k == 0) {
                 break;
             }
-            cur = node.right;
+            cur = cur.right;
         }
 
         return cur.val;

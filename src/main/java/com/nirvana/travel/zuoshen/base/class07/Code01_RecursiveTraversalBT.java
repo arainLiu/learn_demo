@@ -24,8 +24,7 @@ public class Code01_RecursiveTraversalBT {
 		if (head == null) {
 			return;
 		}
-		System.out.println(head.value);
-		pre(head.left);
+   		pre(head.left);
 		pre(head.right);
 	}
 

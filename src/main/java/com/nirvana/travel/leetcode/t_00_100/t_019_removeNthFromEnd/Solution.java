@@ -23,8 +23,8 @@ public class Solution {
         ListNode vNode = new ListNode(0, head);
         int length = 0;
         while (head != null) {
-            length ++;
             head = head.next;
+            length ++;
         }
 
         ListNode cur = vNode;

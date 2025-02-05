@@ -38,21 +38,22 @@ public class Solution {
    * @return
    */
   public int lengthOfLongestSubstring(String s) {
-    int resCount = 0;
-    int length = s.length();
 
-    Map<Character, Integer> map = new HashMap<>();
-    for (int start = 0,end = 0; end < length; end ++) {
-      char indexValue = s.charAt(end);
-      if (map.containsKey(indexValue)) {
-        //取当前重复字符的下标和start做对比
-        start = Math.max(map.get(indexValue) + 1, start);
+    int left =0;
+    int maxCount=0;
+    //记录已经访问过位置的字符和下标
+    Map<Character, Integer> charMap = new HashMap<>();
+    char[] chars = s.toCharArray();
+    for (int i = 0; i < chars.length; i++) {
+      if (charMap.containsKey(chars[i])) {
+        //说明已经访问过了，新的left位置=max(left, 字典中存储的上一个重复元素的下标+1)
+        left = Math.max(left, charMap.get(chars[i]) + 1);
       }
-      resCount = Math.max(resCount, end - start + 1);
-      map.put(indexValue, end);
+      maxCount = Math.max(maxCount, i - left + 1);
+      charMap.put(chars[i], i);
     }
 
-    return resCount;
+    return maxCount;
   }
 
 }
